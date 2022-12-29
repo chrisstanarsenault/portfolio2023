@@ -1,8 +1,10 @@
 <template>
-  <div class="bg-gradient-to-b from-[#0f2027] to-[#203a43] w-full h-screen">
-    <main class="text-white max-w-layout min-h-screen mx-auto w-full px-6 md:px-24 lg:px-40">
+  <div class="h-full">
+    <Header />
+
+    <main class="text-white max-w-layout mx-auto w-full px-6 md:px-24 lg:px-40">
       <!-- Intro -->
-      <section class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center">
+      <section id="intro" class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center">
         <p>Hello wor.... I mean, oh hey! I'm</p>
 
         <div class="space-y-2">
@@ -19,5 +21,5 @@
 </template>
 
 <script setup lang="ts">
-const hello = 'hello'
+import Header from '#layouts/header'
 </script>

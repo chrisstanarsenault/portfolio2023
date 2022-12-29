@@ -30,6 +30,9 @@
       "#composables": [
         "./src/composables"
       ],
+      "#layouts": [
+        "./src/layouts"
+      ],
       "#*": [
         "./src/*"
       ]
