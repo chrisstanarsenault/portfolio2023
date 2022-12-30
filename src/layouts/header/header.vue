@@ -1,6 +1,6 @@
 <template>
   <nav class="w-full flex justify-between items-center px-6 md:px-10 lg:px-12 h-24 backdrop-blur-sm fixed text-white">
-    <a href="#intro" class="text-white text-3xl p-2 border border-white rounded-full">CA</a>
+    <a href="#intro" class="text-accent text-3xl p-2 border border-accent rounded-full">CA</a>
 
     <span>
       <ol class="flex space-x-8 items-center">
@@ -11,7 +11,8 @@
         </span>
 
         <li>
-          <button class="border border-white rounded-md px-3 py-4 tracking-widest">
+          <button
+            class="border border-accent rounded-md px-3 py-4 tracking-widest text-accent hover:bg-accent/10 transition-colors duration-300">
             Resume
           </button>
         </li>

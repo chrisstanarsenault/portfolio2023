@@ -21,6 +21,10 @@ module.exports = {
       padding: {
         'full': '100%',
       },
+      colors: {
+        'accent': '#fff200',
+        'background': '#2c2254'
+      }
     },
   },
   plugins: [],
