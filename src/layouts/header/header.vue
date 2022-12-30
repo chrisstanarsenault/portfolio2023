@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full flex justify-between items-center px-6 md:px-10 lg:px-12 h-24 backdrop-blur-sm fixed text-white">
+  <nav class="w-full flex justify-between items-center px-6 md:px-10 lg:px-12 h-24 backdrop-blur-sm fixed">
     <a href="#intro" class="text-accent text-3xl p-2 border border-accent rounded-full">CA</a>
 
     <span>

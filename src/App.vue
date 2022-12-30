@@ -2,30 +2,48 @@
   <div class="bg-gradient-to-b from-[#0f2027] to-[#203a43] w-full h-full">
     <Header />
 
-    <main class="text-white max-w-layout mx-auto w-full px-6 md:px-24 lg:px-40">
+    <main class="max-w-layout mx-auto w-full px-6 md:px-24 lg:px-40">
       <!-- Intro -->
       <section id="intro" class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center">
         <p class="text-accent">Hello wor.... I mean, oh hey! I'm</p>
 
-        <div class="space-y-2 tracking-wider">
-          <h1 class="text-4xl md:text-6xl lg:text-7xl">Chris Arsenault.</h1>
+        <div class="space-y-2 tracking-wider font-semibold">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl text-white">Chris Arsenault.</h1>
           <h2 class="text-4xl md:text-6xl lg:text-7xl text-gray-300">I'm a frontend developer.</h2>
         </div>
 
-        <p class="max-w-2xl text-lg lg:text-xl text-gray-300">I'm a software engineer specializing in building (and
+        <p class="max-w-2xl text-lg lg:text-xl">I'm a software engineer specializing in building (and
           occasionally
-          designing)
-          exceptional
-          digital experiences. Currently, I'm focused on building accessible, human-centered products at Upstatement.
+          designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered
+          products at Upstatement.
         </p>
       </section>
 
       <!-- About -->
       <section id="about" class="space-y-6 w-full mx-auto flex flex-col justify-center">
-        <div class="flex">
-          <span>01.</span>
-          <h3>About Me</h3>
+        <div class="flex items-end space-x-4">
+          <span class="text-accent text-xl md:text-3xl">01.</span>
+          <h3 class="text-2xl md:text-4xl">About Me</h3>
+        </div>
 
+        <div>
+          <p>Hello! My name is Chris and I enjoy creating things that live on the internet. My interest in web
+            development started
+            back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog
+            button
+            taught me a lot about HTML & CSS!
+
+            Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge
+            corporation,
+            and a student-led design studio. My main focus these days is building accessible, inclusive products and
+            digital
+            experiences at Upstatement for a variety of clients.
+
+            I also recently launched a course that covers everything you need to build a web app with the Spotify API
+            using Node &
+            React.
+
+            Here are a few technologies I’ve been working with recently:</p>
         </div>
       </section>
       <!-- Experience -->
