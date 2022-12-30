@@ -4,34 +4,11 @@
 
     <span>
       <ol class="flex space-x-8 items-center">
-        <li>
-          <a href="#about" class="space-x-2">
-            <span>01.</span>
-            <span>About</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#experience" class="space-x-2">
-            <span>02.</span>
-            <span>Experience</span>
-          </a>
-
-        </li>
-
-        <li>
-          <a href="#work" class="space-x-2">
-            <span>03.</span>
-            <span>Work</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#contact" class="space-x-2">
-            <span>04.</span>
-            <span>Contact</span>
-          </a>
-        </li>
+        <span v-for="link in links" :key="link.label" class="flex space-x-8 items-center">
+          <NavLink :href="link.href" :preLabel="link.preLabel">
+            {{ link.label }}
+          </NavLink>
+        </span>
 
         <li>
           <button class="border border-white rounded-md px-3 py-4 tracking-widest">
@@ -42,3 +19,30 @@
     </span>
   </nav>
 </template>
+
+<script setup lang="ts">
+import NavLink from '#components/nav-link'
+
+const links = [
+  {
+    href: '#about',
+    preLabel: '01.',
+    label: 'About'
+  },
+  {
+    href: '#experience',
+    preLabel: '02.',
+    label: 'Experience'
+  },
+  {
+    href: '#work',
+    preLabel: '03.',
+    label: 'Work'
+  },
+  {
+    href: '#contact',
+    preLabel: '04.',
+    label: 'Contact'
+  },
+]
+</script>
