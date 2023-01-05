@@ -27,37 +27,33 @@
         </div>
 
         <div class="flex gap-x-10">
-          <div class="max-w-2xl">
-            <p class="text-xl">Hello! My name is Chris and I enjoy creating things that live on the internet. My interest in web
-            development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
-            <br />
-            <br />
-            Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge
-            corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
-            <br />
-            <br />
-            I also recently launched a course that covers everything you need to build a web app with the Spotify API
-            using Node & React.
-            <br />
-            <br />
-            Here are a few technologies I've been working with recently:
-          </p>
+          <div class="max-w-2xl space-y-2">
+            <p class="text-xl">
+              Hello! My name is Chris and I enjoy creating things that live on the internet. My interest in web
+              development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+              <br />
+              <br />
+              Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge
+              corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+              <br />
+              <br />
+              I also recently launched a course that covers everything you need to build a web app with the Spotify API
+              using Node & React.
+              <br />
+              <br />
+              Here are a few technologies I've been working with recently:
+            </p>
 
-          <ul>
-            <li>Vue</li>
-            <li>GraphQL</li>
-            <li>Typescript</li>
-            <li>Tailwind</li>
-            <li>AWS</li>
-            <li>Javascript</li>
-            <li>Storybook/Histoire</li>
-            <li>Jest/Vue Test Utils</li>
-          </ul>
+            <ul class="grid grid-cols-3 gap-y-2">
+              <ListItem v-for="item in aboutMeListItems" :key="item">
+                {{ item }}
+              </ListItem>
+            </ul>
           </div>
 
 
           <span class="group">
-            <img :src="profileImage" alt="Chris Arsenault standing in front of a brick wall." class="rounded-xl group-hover:rounded-full transition-all duration-1000 ease-in-out" />
+            <img :src="profileImage" alt="Chris Arsenault standing in front of a brick wall." class="rounded-xl hover:rounded-full transition-all duration-300 ease-in-out" />
           </span>
         </div>
       </section>
@@ -71,5 +67,18 @@
 <script setup lang="ts">
 import Header from '#layouts/header'
 
+import ListItem  from '#components/list-item'
+
 import profileImage from '#assets/Chris.jpg'
+
+const aboutMeListItems = [
+  'Vue',
+  'GraphQL',
+  'Typescript',
+  'Tailwind',
+  'AWS',
+  'Javascript',
+  'Storybook/Histoire',
+  'Jest/Vue Test Utils'
+]
 </script>
