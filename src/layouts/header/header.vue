@@ -31,14 +31,14 @@ const links = [
     label: 'About'
   },
   {
-    href: '#experience',
+    href: '#work',
     preLabel: '02.',
-    label: 'Experience'
+    label: 'Work'
   },
   {
-    href: '#work',
+    href: '#projects',
     preLabel: '03.',
-    label: 'Work'
+    label: 'Experience'
   },
   {
     href: '#contact',

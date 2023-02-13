@@ -20,7 +20,7 @@
       </section>
 
       <!-- About -->
-      <section id="about" class="space-y-6 w-full mx-auto flex flex-col justify-center">
+      <section id="about" class="space-y-6 w-full mx-auto flex flex-col justify-center py-24">
         <div class="flex items-end space-x-4">
           <span class="text-accent text-xl md:text-3xl">01.</span>
           <h3 class="text-2xl md:text-4xl">About Me</h3>
@@ -59,13 +59,34 @@
 
           <span class="group flex justify-center w-1/2 md:w-auto aspect-square">
             <img :src="profileImage" alt="Chris Arsenault standing in front of a brick wall."
-              class="rounded-xl hover:rounded-full transition-all duration-300 ease-in-out" />
+              class="rounded-xl group-hover:rounded-full transition-all duration-300 ease-in-out" />
           </span>
         </div>
       </section>
-      <!-- Experience -->
+
       <!-- Work -->
+      <section id="work" class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center py-24">
+        <div class="flex items-end space-x-4">
+          <span class="text-accent text-xl md:text-3xl">02.</span>
+          <h3 class="text-2xl md:text-4xl">Work Experience</h3>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center py-24">
+        <div class="flex items-end space-x-4">
+          <span class="text-accent text-xl md:text-3xl">03.</span>
+          <h3 class="text-2xl md:text-4xl">Projects</h3>
+        </div>
+      </section>
+
       <!-- Contact -->
+      <section id="contact" class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center py-24">
+        <div class="flex items-end space-x-4">
+          <span class="text-accent text-xl md:text-3xl">04.</span>
+          <h3 class="text-2xl md:text-4xl">Contact</h3>
+        </div>
+      </section>
     </main>
   </div>
 </template>
