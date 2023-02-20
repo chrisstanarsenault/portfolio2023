@@ -70,6 +70,14 @@
           <span class="text-accent text-xl md:text-3xl">02.</span>
           <h3 class="text-2xl md:text-4xl">Work Experience</h3>
         </div>
+
+        <div>
+          <div class="flex">
+            <WorkSidebar :companies="workCompanies" @company-index="selectCompanyDetails" />
+
+            <WorkDetails :companyDetails="workCompanyDetails[currentCompanySelected]" />
+          </div>
+        </div>
       </section>
 
       <!-- Projects -->
@@ -92,12 +100,18 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
 import Header from '#layouts/header'
 
 import ListItem from '#components/list-item'
 import BulletPoint from '#components/icons/bullet-point'
+import WorkSidebar from '#components/work-sidebar'
+import WorkDetails from '#components/work-details'
 
 import profileImage from '#assets/Chris.jpg'
+
+const currentCompanySelected = ref(0)
 
 const aboutMeListItems = [
   'Vue',
@@ -110,4 +124,34 @@ const aboutMeListItems = [
   'Storybook/Histoire',
   'Jest/Vue Test Utils'
 ]
+
+const workCompanies = ['Remx', 'Workflow', 'World Legal Summit']
+
+const workCompanyDetails = [
+  {
+    name: 'Remx - Creative Layer',
+    title: 'Frontend Developer',
+    date: 'May 2021 - Present',
+    url: 'https://remx.xyz/',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel lacinia aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc vel lacinia aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.'
+  },
+  {
+    name: 'Workflow - Creative Layer',
+    title: 'Frontend Developer',
+    date: 'May 2021 - Present',
+    url: '',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel lacinia aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc vel lacinia aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.'
+  },
+  {
+    name: 'World Legal Summit',
+    title: 'Frontend Developer',
+    date: 'May 2021 - Present',
+    url: 'https://worldlegalsummit.org/',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel lacinia aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc vel lacinia aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.'
+  }
+]
+
+const selectCompanyDetails = (index: number) => {
+  currentCompanySelected.value = index
+}
 </script>
