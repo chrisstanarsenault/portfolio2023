@@ -1,9 +1,16 @@
 <template>
   <ul>
-    <li v-for="(company, index) in companies" :key="company" class="border-l-2 p-4 group hover:bg-white/5"
-      :class="index === selectedCompanyIndex ? 'border-accent' : ''">
-      <button @click="selectCompany(index)" class="group-hover:text-accent"
-        :class="index === selectedCompanyIndex ? 'text-accent' : ''">
+    <li
+      v-for="(company, index) in companies"
+      :key="company"
+      class="border-l-2 p-4 group hover:bg-white/5"
+      :class="index === selectedCompanyIndex ? 'border-accent' : ''"
+    >
+      <button
+        class="group-hover:text-accent"
+        :class="index === selectedCompanyIndex ? 'text-accent' : ''"
+        @click="selectCompany(index)"
+      >
         {{ company }}
       </button>
     </li>
@@ -16,7 +23,7 @@ import { type PropType, ref } from 'vue'
 defineProps({
   companies: {
     type: Array as PropType<string[]>,
-    required: true
+    required: true,
   },
 })
 

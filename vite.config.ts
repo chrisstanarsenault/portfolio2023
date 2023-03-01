@@ -4,7 +4,20 @@ import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  build: {
+    target: 'esnext',
+      sourcemap: true,
+      commonjsOptions: {
+        transformMixedEsModules: true,
+      },
+  },
+  plugins: [vue({
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => tag.includes('-'),
+          },
+        },
+      })],
   resolve: {
       alias: {
         '#': resolve(__dirname, './src/'),
