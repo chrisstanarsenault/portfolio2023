@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-4">
+  <div class="space-y-4 h-full">
     <div class="space-y-2">
       <div>
         <h4 class="text-2xl">
@@ -16,7 +16,7 @@
     </div>
 
 
-    <ul class="space-y-2 max-h-10">
+    <ul class="space-y-2 max-h-20">
       <ListItem
         v-for="item in companyDetails.points"
         :key="item"

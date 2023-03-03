@@ -32,7 +32,7 @@
       <!-- About -->
       <section
         id="about"
-        class="space-y-6 w-full mx-auto flex flex-col justify-center py-24"
+        class="space-y-6 w-full mx-auto flex flex-col py-24"
       >
         <div class="flex items-end space-x-4">
           <span class="text-accent text-xl md:text-3xl">01.</span>
@@ -88,7 +88,7 @@
       <!-- Work -->
       <section
         id="work"
-        class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center py-24"
+        class="space-y-6 w-full mx-auto flex flex-col py-24 h-full"
       >
         <div class="flex items-end space-x-4">
           <span class="text-accent text-xl md:text-3xl">02.</span>
@@ -97,22 +97,21 @@
           </h3>
         </div>
 
-        <div>
-          <div class="flex">
-            <WorkSidebar
-              :companies="workCompanies"
-              @company-index="selectCompanyDetails"
-            />
+        <div class="flex flex-col md:flex-row gap-x-10">
+          <WorkSidebar
+            :companies="workCompanies"
+            class="mb-4 md:mb-0"
+            @company-index="selectCompanyDetails"
+          />
 
-            <WorkDetails :company-details="workCompanyDetails[currentCompanySelected]" />
-          </div>
+          <WorkDetails :company-details="workCompanyDetails[currentCompanySelected]" />
         </div>
       </section>
 
       <!-- Projects -->
       <section
         id="projects"
-        class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center py-24"
+        class="space-y-6 min-h-screen w-full mx-auto flex flex-col py-24"
       >
         <div class="flex items-end space-x-4">
           <span class="text-accent text-xl md:text-3xl">03.</span>
@@ -125,7 +124,7 @@
       <!-- Contact -->
       <section
         id="contact"
-        class="space-y-6 min-h-screen w-full mx-auto flex flex-col justify-center py-24"
+        class="space-y-6 min-h-screen w-full mx-auto flex flex-col py-24"
       >
         <div class="flex items-end space-x-4">
           <span class="text-accent text-xl md:text-3xl">04.</span>
@@ -164,7 +163,7 @@ const aboutMeListItems = [
   'Jest/Vue Test Utils',
 ]
 
-const workCompanies = ['Remx', 'Workflow', 'World Legal Summit']
+const workCompanies = ['Remx', 'Workflow', 'WLS']
 
 const workCompanyDetails = [
   {
@@ -205,7 +204,7 @@ const workCompanyDetails = [
     points: [
       'General updates and maintenance of the pre-existing website',
       'Customize layouts as per the World Legal Summit\'s needs',
-      'Worked directly with each city host (approx 30-40 clients) daily to add new updates and revisions to their individual event pages (adding logos, documents, location details, speaker information, etc)'
+      'Worked directly with each city host (approx 30-40 clients) daily to add new updates and revisions to their individual event pages (adding logos, documents, location details, speaker information, etc)',
       'Implementing any new requested features or software needs such as: 1. Live streaming capabilities for each host location utilizing Youtube, 2. Set up Zendesk and created a custom theme for a knowledge base and community section, 3. Integrated a method to connect the Mailchimp account with separate GoogleSheets to collect signup information for each host, when interested parties requested an invite to their city\'s Summit',
     ],
   },

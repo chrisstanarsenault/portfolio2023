@@ -1,20 +1,15 @@
 <template>
-  <ul>
-    <li
+  <div class="flex flex-row md:flex-col h-full">
+    <button
       v-for="(company, index) in companies"
       :key="company"
-      class="border-l-2 p-4 group hover:bg-white/5"
-      :class="index === selectedCompanyIndex ? 'border-accent' : ''"
+      class="border-b-2 md:border-b-0 md:border-l-2 p-4 hover:bg-white/5 hover:text-accent text-left"
+      :class="index === selectedCompanyIndex ? 'border-accent text-accent' : ''"
+      @click="selectCompany(index)"
     >
-      <button
-        class="group-hover:text-accent"
-        :class="index === selectedCompanyIndex ? 'text-accent' : ''"
-        @click="selectCompany(index)"
-      >
-        {{ company }}
-      </button>
-    </li>
-  </ul>
+      {{ company }}
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">
