@@ -6,25 +6,26 @@ import { resolve } from 'path'
 export default defineConfig({
   build: {
     target: 'esnext',
-      sourcemap: true,
-      commonjsOptions: {
-        transformMixedEsModules: true,
-      },
+    sourcemap: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
   },
   plugins: [vue({
-        template: {
-          compilerOptions: {
-            isCustomElement: (tag) => tag.includes('-'),
-          },
-        },
-      })],
-  resolve: {
-      alias: {
-        '#': resolve(__dirname, './src/'),
-        '#assets': resolve(__dirname, './src/assets'),
-        '#components': resolve(__dirname, './src/components'),
-        '#composables': resolve(__dirname, './src/composables'),
-        '#layouts': resolve(__dirname, './src/layouts'),
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag.includes('-'),
       },
     },
+  })],
+  resolve: {
+    alias: {
+      '#': resolve(__dirname, './src/'),
+      '#assets': resolve(__dirname, './src/assets'),
+      '#components': resolve(__dirname, './src/components'),
+      '#composables': resolve(__dirname, './src/composables'),
+      '#layouts': resolve(__dirname, './src/layouts'),
+      '#types': resolve(__dirname, './src/types'),
+    },
+  },
 })

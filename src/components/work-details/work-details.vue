@@ -3,7 +3,7 @@
     <div class="space-y-2">
       <div>
         <h4 class="text-2xl">
-          {{ companyDetails.title }} - {{ companyDetails.name }}
+          {{ companyDetails.title }} - {{ companyDetails.nameLong }}
         </h4>
         <h5 class="text-sm text-gray-300">
           {{ companyDetails.date }}
@@ -36,13 +36,8 @@ import { type PropType } from 'vue'
 import BulletPoint from '#components/icons/bullet-point'
 import ListItem from '#components/list-item'
 
-interface CompanyDetails {
-  title: string,
-  name: string,
-  date: string,
-  stack: string[],
-  points: string[]
-}
+import type { CompanyDetails } from '#types/company-details'
+
 
 defineProps({
   companyDetails: {

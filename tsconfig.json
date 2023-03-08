@@ -18,7 +18,6 @@
     "types": [
       "vite/client",
       "node",
-      "vite-plugin-pwa/client"
     ],
     "paths": {
       "#assets": [
@@ -32,6 +31,9 @@
       ],
       "#layouts": [
         "./src/layouts"
+      ],
+      "#types": [
+        "./src/types"
       ],
       "#*": [
         "./src/*"

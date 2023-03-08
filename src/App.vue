@@ -88,7 +88,7 @@
       <!-- Work -->
       <section
         id="work"
-        class="space-y-6 w-full mx-auto flex flex-col py-24 h-full"
+        class="space-y-6 w-full mx-auto flex flex-col py-24"
       >
         <div class="flex items-end space-x-4">
           <span class="text-accent text-xl md:text-3xl">02.</span>
@@ -99,7 +99,7 @@
 
         <div class="flex flex-col md:flex-row gap-x-10">
           <WorkSidebar
-            :companies="workCompanies"
+            :companies="workCompanyDetails"
             class="mb-4 md:mb-0"
             @company-index="selectCompanyDetails"
           />
@@ -163,11 +163,10 @@ const aboutMeListItems = [
   'Jest/Vue Test Utils',
 ]
 
-const workCompanies = ['Remx', 'Workflow', 'WLS']
-
 const workCompanyDetails = [
   {
-    name: 'Remx',
+    nameShort: 'Remx',
+    nameLong: 'Creative Layer - Remx',
     title: 'Intermediate Frontend Developer',
     date: 'Jan 2022 - Present',
     url: 'https://remx.xyz/',
@@ -181,7 +180,8 @@ const workCompanyDetails = [
     ],
   },
   {
-    name: 'Workflow',
+    nameShort: 'Workflow',
+    nameLong: 'Creative Layer - Workflow',
     title: 'Junior Frontend Developer',
     date: 'Jan 2021 - Jan 2022',
     url: '',
@@ -196,7 +196,8 @@ const workCompanyDetails = [
     ],
   },
   {
-    name: 'World Legal Summit',
+    nameShort: 'WLS',
+    nameLong: 'World Legal Summit',
     title: 'Fullstack Developer',
     date: 'Mar 2019 - Jan 2021',
     url: 'https://worldlegalsummit.org/',
