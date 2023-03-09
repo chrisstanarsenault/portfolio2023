@@ -21,7 +21,7 @@
         v-for="item in companyDetails.points"
         :key="item"
       >
-        <div class="flex gap-x-4 leading-snug">
+        <div class="flex gap-x-2 leading-snug">
           <BulletPoint class="w-4 h-4 stroke-accent mt-1" />
           <span class="max-w-xl inline-block">{{ item }}</span>
         </div>
